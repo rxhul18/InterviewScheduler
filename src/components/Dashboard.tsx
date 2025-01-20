@@ -63,7 +63,7 @@ export function Dashboard() {
             <CardDescription>Select a date to view interviews</CardDescription>
           </CardHeader>
           <CardContent className='flex justify-center'>
-            <InterviewCalendar date={date} onSelect={setDate} />
+            <InterviewCalendar date={date} onSelect={(newDate) => newDate && setDate(newDate)} />
           </CardContent>
         </Card>
 
