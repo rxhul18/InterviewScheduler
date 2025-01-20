@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react-jsx", // Supports modern JSX for React 17+
+    "target": "ESNext", // Required for JSX
+    "module": "ESNext", // Required for ES modules
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
