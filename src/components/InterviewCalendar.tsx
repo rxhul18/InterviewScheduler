@@ -31,7 +31,7 @@ export default function InterviewCalendar({date, onSelect}: InterviewCalendarPro
                 {count > 0 && (
                     <Badge
                         variant="secondary"
-                        className="absolute -top-2 -right-2 h-3 w-3 p-0 flex items-center justify-center text-[8px]"
+                        className="absolute -top-2 -right-3 h-3 w-3 p-0 bg-orange-400 flex items-center justify-center text-[8px]"
                     >
                         {count}
                     </Badge>
