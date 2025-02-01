@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# 🚀 Interview Scheduler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Interview Scheduler** is a modern React application designed to help HR professionals and recruiters efficiently schedule, manage, and view interviews. Built using **React + Vite** and **TypeScript**, this project features a sleek and intuitive UI styled with **Tailwind CSS**. State management is handled seamlessly with **Zustand**, ensuring smooth performance and a delightful user experience.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live application here: [Interview Scheduler](https://interview-scheduler-virid.vercel.app/)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🖼️ Screenshots
 
-- Configure the top-level `parserOptions` property like this:
+### **1. Dashboard View**
+<img width="1380" alt="Screenshot 2025-01-20 at 9 57 01 PM" src="https://github.com/user-attachments/assets/ec5b7c79-be7c-4ec6-a0b1-db6a618244e8" />
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### **2. Schedule Interview Form**
+![image](https://github.com/user-attachments/assets/e6511b0a-5a7f-4d83-b1b8-b9ae68f3c618)
+
+## 🌟 Features
+
+### Core Functionalities
+- **Interview Scheduling**:  
+  Easily schedule interviews by selecting:
+  - Candidate name  
+  - Interviewer name  
+  - Interview type (e.g., Technical, HR, Behavioral)  
+- **Dashboard View**:  
+  Displays all scheduled interviews in a calendar format (powered by **FullCalendar**).
+  
+### Additional Features
+- Minimal and responsive design for an optimal user experience.  
+- Persistent data storage using **localStorage** for maintaining state across sessions.  
+
+---
+
+## 🛠️ Tech Stack
+
+| **Category**       | **Technology Used**                                   |
+|--------------------|------------------------------------------------------|
+| **Frontend**       | React + Vite                                         |
+| **Language**       | TypeScript                                           |
+| **State Management** | Zustand                                             |
+| **Styling**        | Tailwind CSS                                         |
+| **Calendar**       | Shadcn UI                                         |
+
+---
+
+## 📦 Installation
+
+Follow these steps to set up the project locally:
+
+### 1. Clone the Repository:
+```bash
+git clone https://github.com/rxhul18/InterviewScheduler.git
+cd InterviewScheduler
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Install Dependencies:
+```bash
+npm install
 ```
+
+### 3. Run the Development Server:
+```bash
+npm run dev
+```
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit a pull request.  
+
+---
