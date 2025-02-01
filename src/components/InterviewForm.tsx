@@ -26,6 +26,8 @@ export function InterviewForm() {
     type: '' as InterviewType,
   });
 
+  
+  const interviews =  JSON.parse(localStorage.getItem('interviews') || '[]');
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!date) {
@@ -37,9 +39,6 @@ export function InterviewForm() {
       return;
     }
 
-    console.log('formData', formData);
-
-    console.log('formData', date);
     const interview = {
       id: crypto.randomUUID(),
       dateTime: date.toISOString(),
@@ -47,6 +46,8 @@ export function InterviewForm() {
     };
 
     addInterview(interview);
+    interviews.push(interview);
+    localStorage.setItem('interviews', JSON.stringify(interviews));
     toast({
       title: 'Success',
       description: 'Interview scheduled successfully',

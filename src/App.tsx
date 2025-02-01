@@ -6,7 +6,7 @@ import { Dashboard } from "./components/Dashboard";
 export default function App() {
   return (
     <BrowserRouter>
-        <div className="min-h-screen w-full flex flex-col justify-center">
+        <div className="min-h-full w-full flex flex-col items-center justify-center">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/schedule" element={<InterviewForm />} />

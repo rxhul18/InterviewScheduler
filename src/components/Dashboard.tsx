@@ -48,7 +48,7 @@ export function Dashboard() {
   });
 
   return (
-    <div className="container mx-auto p-6 min-h-screen">
+    <div className="container mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Interview Dashboard</h1>
         <Button asChild>

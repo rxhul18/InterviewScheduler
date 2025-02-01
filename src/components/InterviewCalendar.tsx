@@ -2,6 +2,7 @@ import { useInterviewStore } from "@/lib/store";
 import { DayContent, DayContentProps } from 'react-day-picker';
 import { Badge } from "./ui/badge";
 import { Calendar } from "./ui/calendar";
+import { useEffect } from "react";
 
 interface InterviewCalendarProps {
     date: Date;
@@ -10,7 +11,11 @@ interface InterviewCalendarProps {
 
 export default function InterviewCalendar({date, onSelect}: InterviewCalendarProps) {
     const interviews = useInterviewStore((state) => state.interviews);
+    const { loadInterviews } = useInterviewStore();
 
+    useEffect(()=>{
+        loadInterviews();
+    },[])
     //Get interviews for each day
     const getInterviewCount = (day: Date) => {
         return interviews.filter((interview) => {
