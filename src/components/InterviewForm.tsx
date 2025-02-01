@@ -13,6 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { useInterviewStore } from '@/lib/store';
 import { InterviewType } from '@/lib/types';
 import InterviewCalendar from './InterviewCalendar';
+import { TimePickerDemo } from './timepicker/time-picker-demo';
 
 export function InterviewForm() {
   const navigate = useNavigate();
@@ -36,6 +37,9 @@ export function InterviewForm() {
       return;
     }
 
+    console.log('formData', formData);
+
+    console.log('formData', date);
     const interview = {
       id: crypto.randomUUID(),
       dateTime: date.toISOString(),
@@ -86,6 +90,7 @@ export function InterviewForm() {
           </SelectContent>
         </Select>
         <InterviewCalendar date={date ?? new Date()} onSelect={setDate} />
+        <TimePickerDemo date={date} setDate={setDate} />
         <Button type="submit" className="w-full">
           Schedule Interview
         </Button>

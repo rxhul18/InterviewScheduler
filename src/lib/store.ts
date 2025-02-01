@@ -15,4 +15,5 @@ export const useInterviewStore = create<InterviewStore>((set)=>({
     deleteInterview: (id) => set((state)=>({
         interviews: state.interviews.filter((interview)=>interview.id !== id)
     }))
+    
 }))

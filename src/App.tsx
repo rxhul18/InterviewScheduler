@@ -6,7 +6,7 @@ import { Dashboard } from "./components/Dashboard";
 export default function App() {
   return (
     <BrowserRouter>
-        <div className="h-screen w-full flex flex-col justify-center">
+        <div className="min-h-screen w-full flex flex-col justify-center">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/schedule" element={<InterviewForm />} />

@@ -48,7 +48,7 @@ export function Dashboard() {
   });
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 min-h-screen">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Interview Dashboard</h1>
         <Button asChild>
@@ -56,7 +56,7 @@ export function Dashboard() {
         </Button>
       </div>
 
-      <div className="grid md:grid-cols-[400px_1fr] gap-6">
+      <div className="flex flex-col md:grid grid-cols-[100%_1fr] md:grid-cols-[400px_1fr] gap-6">
         <Card>
           <CardHeader>
             <CardTitle>Calendar</CardTitle>
