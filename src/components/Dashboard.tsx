@@ -31,6 +31,17 @@ export function Dashboard() {
   const { interviews, deleteInterview } = useInterviewStore();
 
   const handleDelete = (id: string) => {
+    const interviews = localStorage.getItem("interviews");
+    if (!interviews) return;
+
+    const data = JSON.parse(interviews);
+
+    // Find index of the item with the given id
+    const index = data.findIndex((interviews: { id: string; }) => interviews.id === id);
+    if (index !== -1) {
+        data.splice(index, 1); // Remove item at the found index
+        localStorage.setItem("interviews", JSON.stringify(data));
+    }
     deleteInterview(id);
     toast({
       title: 'Success',
@@ -122,7 +133,7 @@ export function Dashboard() {
                           <AlertDialogFooter>
                             <AlertDialogCancel>Cancel</AlertDialogCancel>
                             <AlertDialogAction
-                              onClick={() => handleDelete(interview.id)}
+                              onClick={()=>handleDelete(interview.id)}
                             >
                               Delete
                             </AlertDialogAction>
