@@ -11,10 +11,11 @@ Check out the live application here: [Interview Scheduler](https://interview-sch
 ## 🖼️ Screenshots
 
 ### **1. Dashboard View**
-<img width="1380" alt="Screenshot 2025-01-20 at 9 57 01 PM" src="https://github.com/user-attachments/assets/ec5b7c79-be7c-4ec6-a0b1-db6a618244e8" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/b7c3d86a-982b-4bab-97b0-18de0c721b8b" />
 
 ### **2. Schedule Interview Form**
-![image](https://github.com/user-attachments/assets/e6511b0a-5a7f-4d83-b1b8-b9ae68f3c618)
+<img width="1439" alt="image" src="https://github.com/user-attachments/assets/0fe55040-d582-4b3b-a3f5-eb24ebfe4e39" />
+
 
 ## 🌟 Features
 
