@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">interview-scheduler</string>
+    <string name="title_activity_main">interview-scheduler</string>
+    <string name="package_name">app.interview.app</string>
+    <string name="custom_url_scheme">app.interview.app</string>
+</resources>
