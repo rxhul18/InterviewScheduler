@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { useToast } from '@/hooks/use-toast';
 import { useInterviewStore } from '@/lib/store';
-import { Calendar as CalendarIcon, Trash2 } from 'lucide-react';
+import { Calendar as CalendarIcon, LucideCalendarDays, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import InterviewCalendar from './InterviewCalendar';
@@ -59,9 +59,9 @@ export function Dashboard() {
   });
 
   return (
-    <div className="container mx-auto p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">Interview Dashboard</h1>
+    <div className="container mx-auto !p-3 md:p-6 mt-10 md:mt-0">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+        <h1 className="text-3xl font-bold flex items-center gap-1"><LucideCalendarDays className='size-7 stroke-[1.5px]' />Interview Dashboard</h1>
         <Button asChild>
           <Link to="/schedule">Schedule Interview</Link>
         </Button>
